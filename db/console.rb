@@ -1,9 +1,9 @@
 require("pry")
-require_relative('../models/artist')
-require_relative('../models/album')
+require_relative("../models/artist")
+require_relative("../models/album")
 
-Album.delete_all()
-Artist.delete_all()
+# Album.delete_all()
+# Artist.delete_all()
 
 artist1 = Artist.new({
   'name' => 'Childish Gambino'
@@ -66,11 +66,20 @@ album1 = Album.new({
             'genre' => 'Hip-hop',
             'artist_id' => artist2.id
             })
+
             album6.save()
 
             album1.artist()
 
             artist2.album()
+
+            album1.genre = "Soul"
+            album1.edit()
+
+            # artist2 = "Outlaw Hercules"
+            # artist2.edit()
+
+          
 
 
 
