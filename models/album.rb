@@ -47,6 +47,13 @@ class Album
     album_hash = results.first
     album = Album.new(album_hash)
     return album
+
+    def self.delete_all()
+      sql = "DELETE FROM albums"
+      SqlRunner.run(sql)
+    end
+
+
   end
 
 
