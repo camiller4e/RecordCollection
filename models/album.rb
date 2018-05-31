@@ -26,7 +26,7 @@ class Album
     @id = SqlRunner.run(sql, values)[0]['id']
   end
 
-  def edit()
+  def update()
     sql = "UPDATE albums SET
     ( title,
       genre,
@@ -64,6 +64,7 @@ class Album
     album_hash = results.first
     album = Album.new(album_hash)
     return album
+  end
 
     def self.delete_all()
       sql = "DELETE FROM albums"
@@ -71,7 +72,7 @@ class Album
     end
 
 
-  end
+  
 
 
 
